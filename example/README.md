@@ -1,6 +1,5 @@
 
 # Identical Items List
-
 [![Dart](https://github.com/simphotonics/identical_items_list/actions/workflows/dart.yml/badge.svg)](https://github.com/simphotonics/identical_items_list/actions/workflows/dart.yml)
 
 ## Introduction

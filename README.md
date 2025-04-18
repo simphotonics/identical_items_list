@@ -1,22 +1,24 @@
 
 # Identical Items List
-
 [![Dart](https://github.com/simphotonics/identical_items_list/actions/workflows/dart.yml/badge.svg)](https://github.com/simphotonics/identical_items_list/actions/workflows/dart.yml)
+
 
 ## Introduction
 
 The package [`identical_items_list`][identical_items_list] provides
 a *non-empty* unmodifiable Dart list containing identical
 items. The list is unmodifiable in the sense that object mutating methods
-are not implemented. `IdenticalItemsList` implements the interface `List<E>`
-without using an underlying collection.
+are not implemented.
 
 ## Use Case
 
-Imagine a function that returns a (potentially very long) list, which
+Imagine a function that returns a (potentially very long) list which
 for certain conditions contains identical entries. In such cases,
-it may be much more efficient to return an
-[`IdenticalItemsList`][IdenticalItemsList] instead.
+instead of creating and returning a normal list object,
+it may be more efficient to return an
+[`IdenticalItemsList`][IdenticalItemsList] since
+it implements the interface
+[`List<E>`][List] without using an underlying collection.
 
 ## Usage
 
@@ -50,7 +52,7 @@ void main(List<String> args) {
 $ dart example/bin/example.dart
 List: [42, 42, 42, 42, 42, ..., 42, 42]
 
-Type: is List<int>: true 
+Type: is List<int>: true
 
 Length: 1000000
 
@@ -82,3 +84,5 @@ Please file feature requests and bugs at the [issue tracker].
 [IdenticalItemsIterable]: https://pub.dev/documentation/identical_items_list/latest/identical_items_list/IdenticalItemsIterable-class.html
 
 [IdenticalItemsIterator]: https://pub.dev/documentation/identical_items_list/latest/identical_items_list/IdenticalItemsIterator-class.html
+
+[List]:https://api.dart.dev/dart-core/List-class.html
