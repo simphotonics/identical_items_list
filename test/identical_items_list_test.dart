@@ -46,4 +46,14 @@ void main() {
       expect(l1 + l2, ['a', 'a', 'b']);
     });
   });
+  group('Unmodifiable:', () {
+    test('[] = ', () {
+      final l1 = IdenticalItemsList(value: 'a', length: 1000);
+      expect(() => l1[5] = 'not allowed', throwsA(unsupportedError));
+    });
+    test('add', () {
+      final l1 = IdenticalItemsList(value: 'a', length: 1000);
+      expect(() => l1.add('not allowed'), throwsA(unsupportedError));
+    });
+  });
 }
