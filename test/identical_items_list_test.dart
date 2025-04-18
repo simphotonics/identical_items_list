@@ -60,7 +60,7 @@ void main() {
     final l1 = IdenticalItemsList(value: 1, length: 5);
     final l2 = IdenticalItemsList(value: 1, length: 5);
     test('== ', () {
-      expect(l1 == l2, isTrue);
+      expect(l1 == l2, isFalse);
     });
     test('identical', () {
       expect(identical(l1, l2), isFalse);
