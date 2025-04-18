@@ -3,6 +3,8 @@ import 'dart:math';
 import 'identical_items_iterable.dart';
 import 'identical_items_iterator.dart';
 
+final unsupportedError = UnsupportedError('Cannot modify an unmodifiable list');
+
 /// Efficient representation of a list with [length] identical elements with
 /// value [value].
 ///
@@ -47,17 +49,17 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   void operator []=(int index, E value) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void add(E element) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void addAll(Iterable<E> iterable) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
@@ -96,7 +98,7 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   void fillRange(int start, int end, [E? fill]) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
@@ -152,12 +154,12 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   void insert(int index, E element) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void insertAll(int index, Iterable<E> iterable) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
@@ -227,37 +229,37 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   bool remove(Object? element) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   E removeAt(int index) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   E removeLast() {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void removeRange(int start, int end) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void removeWhere(bool Function(E element) test) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void replaceRange(int start, int end, Iterable<E> newContents) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void retainWhere(bool Function(E element) test) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
@@ -265,12 +267,12 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   void setAll(int index, Iterable<E> iterable) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
   void setRange(int start, int end, Iterable<E> iterable, [int skipCount = 0]) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
@@ -336,7 +338,7 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   set last(E value) {
-    throw UnimplementedError();
+    throw unsupportedError;
   }
 
   @override
