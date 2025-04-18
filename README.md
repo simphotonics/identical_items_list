@@ -7,8 +7,8 @@
 
 The package [`identical_items_list`][identical_items_list] provides
 a *non-empty* unmodifiable Dart list containing identical
-items. The list is unmodifiable in the sense that object mutating methods
-are not implemented.
+items. The list is unmodifiable in the sense that object-mutating methods
+are not implemented and throw an [`UnsupportedError`][UnsupportedError].
 
 ## Use Case
 
@@ -90,3 +90,5 @@ Please file feature requests and bugs at the [issue tracker].
 [IdenticalItemsIterator]: https://pub.dev/documentation/identical_items_list/latest/identical_items_list/IdenticalItemsIterator-class.html
 
 [List]:https://api.dart.dev/dart-core/List-class.html
+
+[UnsupportedError]: https://api.dart.dev/dart-core/UnsupportedError-class.html
