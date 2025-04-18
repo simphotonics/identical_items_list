@@ -8,7 +8,7 @@ import 'identical_items_iterator.dart';
 /// If an unsuitable [length is provided, the default value of 1
 /// is used instead.
 class SingleValueIterable<E> extends Iterable<E> {
-  SingleValueIterable({required this.value, int length = 1})
+  const SingleValueIterable({required this.value, int length = 1})
     : length = (length > 0) ? length : 1;
 
   /// The value of the identical elements in this iterable.

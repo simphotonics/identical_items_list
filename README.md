@@ -12,9 +12,9 @@ are not implemented and throw an [`UnsupportedError`][UnsupportedError].
 
 ## Use Case
 
-Imagine a function that returns a (potentially very long) list which
+Consider a function that returns a (potentially very long) list which
 for certain conditions contains identical entries. In such cases,
-instead of creating and returning a normal list object,
+instead of creating and returning a standard `List` object,
 it may be more efficient to return an
 [`IdenticalItemsList`][IdenticalItemsList] since
 it implements the interface
@@ -66,6 +66,15 @@ Access: list[1024] = 42
 ```
 </details>
 
+Note: The class [`IdenticalItemsList`][IdenticalItemsList] provides a `const`
+constructor making it possible to define const objects:
+```Dart
+final list1 = const IdenticalItemsList(value: 42, length: 1000);
+final list2 = const IdenticalItemsList(value: 42, length: 1000);
+
+print(list1 == list2); // true
+print(identical(list1 == list2)); // true
+```
 
 ## Examples
 

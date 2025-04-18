@@ -56,4 +56,24 @@ void main() {
       expect(() => l1.add('not allowed'), throwsA(unsupportedError));
     });
   });
+  group('Comparison:', () {
+    final l1 = IdenticalItemsList(value: 1, length: 5);
+    final l2 = IdenticalItemsList(value: 1, length: 5);
+    test('== ', () {
+      expect(l1 == l2, isTrue);
+    });
+    test('identical', () {
+      expect(identical(l1, l2), isFalse);
+    });
+  });
+  group('Comparison Const:', () {
+    final l1 = const IdenticalItemsList(value: 1, length: 5);
+    final l2 = const IdenticalItemsList(value: 1, length: 5);
+    test('== ', () {
+      expect(l1 == l2, isTrue);
+    });
+    test('identical', () {
+      expect(identical(l1, l2), isTrue);
+    });
+  });
 }

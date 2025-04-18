@@ -13,7 +13,7 @@ final unsupportedError = UnsupportedError('Cannot modify an unmodifiable list');
 /// If an unsuitable [length] is provided, the default value of 1
 /// is used instead.
 class IdenticalItemsList<E> implements List<E> {
-  IdenticalItemsList({required this.value, int length = 1})
+  const IdenticalItemsList({required this.value, int length = 1})
     : length = (length > 0) ? length : 1;
 
   /// The value of the identical elements in this list.
