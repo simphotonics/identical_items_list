@@ -1,8 +1,7 @@
-/// Iterates an [Iterable] with [length] elements. All elements have value
-///  [first].
+
 class IdenticalItemsIterator<E> implements Iterator<E> {
   /// Constructs an object of type [IdenticalItemsIterator].
-  /// * [first]: The value of all iterator elements.
+  /// * [value]: The value of all iterator elements.
   /// * [length]: The number of elements. Must be larger than 0.
   /// If an unsuitable length is provided, the default value of 1
   /// is used instead.
@@ -11,7 +10,7 @@ class IdenticalItemsIterator<E> implements Iterator<E> {
       current = value,
       length = (length > 0) ? length : 1;
 
-  /// The length of the underlying iterable.
+  /// The length of the iterated iterable.
   final int length;
 
   /// The current position.

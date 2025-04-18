@@ -3,7 +3,6 @@ import 'identical_items_iterator.dart';
 /// An efficient iterable with [length] identical elements.
 /// The value of all elements is [value].
 ///
-/// ---
 /// The number of elements be larger than 0.
 /// If an unsuitable [length is provided, the default value of 1
 /// is used instead.
