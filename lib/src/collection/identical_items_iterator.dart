@@ -1,4 +1,3 @@
-
 class IdenticalItemsIterator<E> implements Iterator<E> {
   /// Constructs an object of type [IdenticalItemsIterator].
   /// * [value]: The value of all iterator elements.
