@@ -1,9 +1,9 @@
 name: identical_items_list
 
-description: Efficient representation of a non-empty list
-  with identical items. Provides a matching iterable and iterator.
+description: Efficient implementation of a non-empty list, iterable, and
+  iterator containing identical elements.
 
-version: 1.0.0
+version: 1.0.1
 
 topics:
  - list

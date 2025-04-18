@@ -30,8 +30,8 @@ class IdenticalItemsList<E> implements List<E> {
 
   /// Returns a [Iterable] with [length] elements. All elements
   /// have value [first].
-  SingleValueIterable<E> get iterable =>
-      SingleValueIterable(value: value, length: length);
+  IdenticalItemsIterable<E> get iterable =>
+      IdenticalItemsIterable(value: value, length: length);
 
   @override
   List<E> operator +(List<E> other) {
