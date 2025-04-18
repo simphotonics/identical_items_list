@@ -27,6 +27,10 @@ as a dependency in your pubspec.yaml file. The
 example below shows how to construct an object of type
 [`IdenticalItemsList`][IdenticalItemsList].
 
+Note: It is *not* possible to create an
+empty [`IdenticalItemsList`][IdenticalItemsList]. If a non-positive constructor
+parameter `length` is provided, the value 1 will be used instead.
+
 ```Dart
 import 'package:identical_items_list/identical_items_list.dart';
 
