@@ -358,11 +358,11 @@ class IdenticalItemsList<E> implements List<E> {
 
   @override
   set first(E value) {
-    throw UnimplementedError('Cannot modify a SingleValueList.');
+    throw unsupportedError;
   }
 
   @override
   set length(int newLength) {
-    throw UnimplementedError('Cannot modify the length of a SingleValueList');
+    throw unsupportedError;
   }
 }
