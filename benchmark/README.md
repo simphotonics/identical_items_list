@@ -11,7 +11,8 @@ items.
 
 ## Benchmark Code
 
-In order to compare the efficiency of  and , the following benchmark were
+In order to compare the efficiency of[`IdenticalItemsList`][IdenticalItemsList]
+and a standard Dart list, the following benchmarks were
 performed:
 
 ```Dart
@@ -81,6 +82,7 @@ void main() {
 
 ## Benchmark Scores
 <details> <summary> Click to show the console output. </summary>
+
 ![Benchmark Scores](https://github.com/simphotonics/identical_items_list/raw/main/images/benchmark_report.png)
 </details>
 
