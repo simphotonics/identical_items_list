@@ -55,3 +55,4 @@ echo -e "${BLUE}=== Running Example $PWD...${RESET}"
 echo
 
 dart example/bin/list_example.dart
+

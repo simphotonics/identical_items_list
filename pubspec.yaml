@@ -1,9 +1,9 @@
 name: identical_items_list
 
-description: Efficient implementation of a non-empty list, iterable, and
-  iterator containing identical elements.
+description: Efficient implementation of a non-empty unmodifiable
+ list and iterable containing identical elements.
 
-version: 1.0.1
+version: 1.0.2
 
 topics:
  - list
@@ -17,5 +17,6 @@ environment:
   sdk: ^3.7.0
 
 dev_dependencies:
+  benchmark_runner: ^2.0.0
   lints: ^5.1.1
   test: ^1.24.0

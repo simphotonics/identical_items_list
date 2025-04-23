@@ -19,6 +19,7 @@ it may be more efficient to return an
 [`IdenticalItemsList`][IdenticalItemsList] since
 it implements the interface
 [`List<E>`][List] without using an underlying collection.
+For more details see [benchmark][benchmark] scores.
 
 ## Usage
 
@@ -85,6 +86,8 @@ For further information see [example].
 Please file feature requests and bugs at the [issue tracker].
 
 [issue tracker]: https://github.com/simphotonics/identical_items_list/issues
+
+[benchmark]: https://github.com/simphotonics/identical_items_list/tree/main/benchmark
 
 [collections]: https://api.dart.dev/stable/dart-collection/dart-collection-library.html
 
