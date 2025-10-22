@@ -22,7 +22,7 @@ import 'package:identical_items_list/identical_items_list.dart';
 
 void main() {
   final iiList = IdenticalItemsList(value: 42, length: 1000000);
-  final list = List.filled(1000000, 42, growable: true);
+  final list = List.filled(1000000, 42);
 
   group('construct:', () {
     benchmark('IdenticalItemsList<int>', () {

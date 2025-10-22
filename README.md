@@ -7,18 +7,24 @@
 
 The package [`identical_items_list`][identical_items_list] provides
 a *non-empty* unmodifiable Dart list containing *identical*
-items. An object of type [`IdenticalItemsList`][IdenticalItemsList] is unmodifiable in the sense that methods changing the list-length or its
+items. An object of type [`IdenticalItemsList`][IdenticalItemsList] is
+unmodifiable in the sense that methods changing the list-length or its
 elements throw an [`UnsupportedError`][UnsupportedError].
 
 
 ## Use Case
 
 Consider a function that returns a (potentially very long) list which
-for certain conditions contains identical entries. In such cases,
+for a certain case contains identical entries. In such a case,
 instead of creating and returning a standard `List` object,
-it is more efficient to return an
-[`IdenticalItemsList`][IdenticalItemsList] since the list has to store
-only one item. For more details see [benchmark][benchmark] scores.
+might be more efficient to return an
+[`IdenticalItemsList`][IdenticalItemsList]:
+```Dart
+final list = List.filled(1000000, 42); // 14000 microseconds
+final iList = IdenticalItemsList(value: 42, length: 1000000); // 0.02 microseconds
+```
+For more details see the page showing [benchmark][benchmark] scores.
+
 
 ## Usage
 
