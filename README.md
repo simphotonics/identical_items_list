@@ -16,9 +16,9 @@ elements throw an [`UnsupportedError`][UnsupportedError].
 
 Consider a function that returns a (potentially very long) list which
 for a certain case contains identical entries. In such a case,
-instead of creating and returning a standard `List` object,
-might be more efficient to return an
-[`IdenticalItemsList`][IdenticalItemsList]:
+it might be more efficient to return an
+[`IdenticalItemsList`][IdenticalItemsList] instead of
+creating and returning a standard `List` object,:
 ```Dart
 final list = List.filled(1000000, 42); // 14000 microseconds
 final iList = IdenticalItemsList(value: 42, length: 1000000); // 0.02 microseconds
@@ -31,12 +31,7 @@ For more details see the page showing [benchmark][benchmark] scores.
 To use this library include [`identical_items_list`][identical_items_list]
 as a dependency in your pubspec.yaml file. The
 example below shows how to construct an object of type
-[`IdenticalItemsList`][IdenticalItemsList].
-
-Note: It is *not* possible to create an
-empty [`IdenticalItemsList`][IdenticalItemsList]. The constructor parameter
-`value` is required and the default length is one, `value` being he first
-element of the list.
+[`IdenticalItemsList`][IdenticalItemsList]:
 
 ```Dart
 import 'package:identical_items_list/identical_items_list.dart';
@@ -73,17 +68,23 @@ Access: list[1024] = 42
 ```
 </details>
 
-Note: The class [`IdenticalItemsList`][IdenticalItemsList] provides a `const`
+## Notes
+
+* It is *not* possible to create an
+empty [`IdenticalItemsList`][IdenticalItemsList]. The constructor parameter
+`value` is required and the default list `length` is one.
+
+* The class [`IdenticalItemsList`][IdenticalItemsList] provides a `const`
 constructor making it possible to define const objects:
-```Dart
-final list1 = const IdenticalItemsList(value: 42, length: 1000);
-final list2 = const IdenticalItemsList(value: 42, length: 1000);
+  ```Dart
+  final list1 = const IdenticalItemsList(value: 42, length: 1000);
+  final list2 = const IdenticalItemsList(value: 42, length: 1000);
 
-print(list1 == list2); // true
-print(identical(list1 == list2)); // true
-```
+  print(list1 == list2); // true
+  print(identical(list1 == list2)); // true
+  ```
 
-Note: An [`IdenticalItemsList<T>`][IdenticalItemsList] is immutable if the
+*  An object of type [`IdenticalItemsList<T>`][IdenticalItemsList] is immutable if the
 constructor parameter `value` is an immutable object.
 
 ## Examples
