@@ -14,8 +14,8 @@ elements throw an [`UnsupportedError`][UnsupportedError].
 
 ## Use Case
 
-Consider a function that returns a (potentially very long) list which
-for a certain case contains identical entries. In such a case,
+Consider a function that returns a (potentially very long) list. If
+the list contains identical entries for a certain case,
 it might be more efficient to return an
 [`IdenticalItemsList`][IdenticalItemsList] instead of
 creating and returning a standard [`List`][List] object:

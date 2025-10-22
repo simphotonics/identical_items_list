@@ -7,9 +7,9 @@ version: 1.0.3
 
 topics:
  - list
- - collection
- - iterator
  - iterable
+ - iterator
+ - collection
 
 repository: https://github.com/simphotonics/identical_items_list
 
