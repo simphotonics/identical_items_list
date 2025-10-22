@@ -6,20 +6,19 @@
 ## Introduction
 
 The package [`identical_items_list`][identical_items_list] provides
-a *non-empty* unmodifiable Dart list containing identical
-items. The list is unmodifiable in the sense that object-mutating methods
-are not implemented and throw an [`UnsupportedError`][UnsupportedError].
+a *non-empty* unmodifiable Dart list containing *identical*
+items. An object of type [`IdenticalItemsList`][IdenticalItemsList] is unmodifiable in the sense that methods changing the list-length or its
+elements throw an [`UnsupportedError`][UnsupportedError].
+
 
 ## Use Case
 
 Consider a function that returns a (potentially very long) list which
 for certain conditions contains identical entries. In such cases,
 instead of creating and returning a standard `List` object,
-it may be more efficient to return an
-[`IdenticalItemsList`][IdenticalItemsList] since
-it implements the interface
-[`List<E>`][List] without using an underlying collection.
-For more details see [benchmark][benchmark] scores.
+it is more efficient to return an
+[`IdenticalItemsList`][IdenticalItemsList] since the list has to store
+only one item. For more details see [benchmark][benchmark] scores.
 
 ## Usage
 
@@ -29,8 +28,9 @@ example below shows how to construct an object of type
 [`IdenticalItemsList`][IdenticalItemsList].
 
 Note: It is *not* possible to create an
-empty [`IdenticalItemsList`][IdenticalItemsList]. If a non-positive constructor
-parameter `length` is provided, the value 1 will be used instead.
+empty [`IdenticalItemsList`][IdenticalItemsList]. The constructor parameter
+`value` is required and the default length is one, `value` being he first
+element of the list.
 
 ```Dart
 import 'package:identical_items_list/identical_items_list.dart';
@@ -76,6 +76,9 @@ final list2 = const IdenticalItemsList(value: 42, length: 1000);
 print(list1 == list2); // true
 print(identical(list1 == list2)); // true
 ```
+
+Note: An [`IdenticalItemsList<T>`][IdenticalItemsList] is immutable if the
+constructor parameter `value` is an immutable object.
 
 ## Examples
 
