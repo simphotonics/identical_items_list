@@ -18,7 +18,7 @@ Consider a function that returns a (potentially very long) list which
 for a certain case contains identical entries. In such a case,
 it might be more efficient to return an
 [`IdenticalItemsList`][IdenticalItemsList] instead of
-creating and returning a standard `List` object,:
+creating and returning a standard [`List`][List] object:
 ```Dart
 final list = List.filled(1000000, 42); // 14000 microseconds
 final iList = IdenticalItemsList(value: 42, length: 1000000); // 0.02 microseconds
