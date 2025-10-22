@@ -24,3 +24,5 @@ doc/api/
 # Avoid commiting vscode files.
 *.vscode
 *.code-workspace
+
+.pubignore
