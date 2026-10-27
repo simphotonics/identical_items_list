@@ -3,7 +3,7 @@ name: identical_items_list
 description: Efficient non-empty unmodifiable
  list and iterable containing identical elements.
 
-version: 1.0.3
+version: 1.1.0
 
 topics:
  - list
@@ -14,9 +14,9 @@ topics:
 repository: https://github.com/simphotonics/identical_items_list
 
 environment:
-  sdk: ^3.9.0
+  sdk: ^3.13.0
 
 dev_dependencies:
-  benchmark_runner: ^2.0.2
-  lints: ^6.0.0
-  test: ^1.26.3
+  benchmark_runner: ^2.3.0
+  lints: ^6.1.0
+  test: ^1.33.0
