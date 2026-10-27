@@ -5,13 +5,10 @@ import 'identical_items_iterator.dart';
 /// The number of elements be larger than 0.
 /// If an unsuitable [length is provided, the default value of 1
 /// is used instead.
-class IdenticalItemsIterable<E> extends Iterable<E> {
-  const IdenticalItemsIterable({required this.value, int length = 1})
-    : length = (length > 0) ? length : 1;
-
-  /// The value of the identical elements in this iterable.
-  final E value;
-
+class const IdenticalItemsIterable<E>(
+/// The value of the identical elements in this iterable.
+{required final E value, int length = 1})
+    extends Iterable<E> {
   @override
   E get first => value;
 
@@ -19,7 +16,7 @@ class IdenticalItemsIterable<E> extends Iterable<E> {
   E get last => value;
 
   @override
-  final int length;
+  final int length = (length > 0) ? length : 1;
 
   @override
   Iterator<E> get iterator =>

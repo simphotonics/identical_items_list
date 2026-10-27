@@ -1,3 +1,5 @@
+// ignore_for_file: initialize_in_field_declaration
+
 import 'dart:math';
 
 import 'identical_items_iterable.dart';
@@ -12,12 +14,14 @@ final unsupportedError = UnsupportedError('Cannot modify an unmodifiable list');
 /// The number of elements must be larger than 0.
 /// If an unsuitable [length] is provided, the default value of 1
 /// is used instead.
-class IdenticalItemsList<E> implements List<E> {
-  const IdenticalItemsList({required this.value, int length = 1})
-    : length = (length > 0) ? length : 1;
+class const IdenticalItemsList<E>({
+  // The value of the identical elements in this list.
+  required final E value,
 
-  /// The value of the identical elements in this list.
-  final E value;
+  /// The list length.
+  int length = 1,
+}) implements List<E> {
+  this : length = (length > 0) ? length : 1;
 
   @override
   E get first => value;
