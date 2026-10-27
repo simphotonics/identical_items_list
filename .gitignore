@@ -4,7 +4,6 @@
 .dart_tool/
 .packages
 build/
-
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 
@@ -22,7 +21,5 @@ doc/api/
 *.js.map
 
 # Avoid commiting vscode files.
- .vscode
- *.code-workspace
-
-.pubignore
+.vscode/
+*.code-workspace
