@@ -22,7 +22,7 @@ doc/api/
 *.js.map
 
 # Avoid commiting vscode files.
-*.vscode
-*.code-workspace
+ .vscode
+ *.code-workspace
 
 .pubignore
