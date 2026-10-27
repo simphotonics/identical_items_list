@@ -83,7 +83,7 @@ void main() {
 ## Benchmark Scores
 <details> <summary> Click to show the console output. </summary>
 
-![Benchmark Scores](https://github.com/simphotonics/identical_items_list/raw/main/images/benchmark_report.png)
+![Benchmark Scores](https://github.com/simphotonics/identical_items_list/raw/main/images/benchmark_report.svg?sanitize=true)
 </details>
 
 The benchmark scores show that a standart list performs equally well when it
