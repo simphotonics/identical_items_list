@@ -1,2 +1,4 @@
 # Don't publish images. They are not needed for pub.dev.
 images/
+
+doc/
